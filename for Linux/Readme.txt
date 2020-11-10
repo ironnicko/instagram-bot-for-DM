@@ -5,5 +5,6 @@
 
 3) Then copy and paste the following:"python3 instagrambot.py"
 
-4) Then follow the instructions to login and ENJOY
+4) Then follow the instructions and wait for the terminal to show "Enter your message"[NOTE: dont close the browser, just keep it minimized at all times]
 
+5)Then start entering your messages
