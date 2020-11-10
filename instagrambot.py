@@ -1,21 +1,21 @@
 from selenium import webdriver
 import os
 import time
+import getpass
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.common.keys import Keys
 
 
-usern = input('name of user >>')
-message_ = input("message >>>")
+usern = input('Username of the person you want to send message >>')
+
 
 class bot:
-    def __init__(self, user, message):
-        self.username = input('enter username')
-        self.password = input('enter password')
+    def __init__(self, user):
+        self.username = input('enter your username')
+        self.password = getpass.getpass('enter your password')
         self.user = user
-        self.message =  message
         self.base_url = 'https://www.instagram.com/'
         try:
             self.bot = webdriver.Chrome(os.getcwd()+"/chromedriver")
@@ -52,7 +52,7 @@ class bot:
             self.bot.find_element_by_xpath('/html/body/div[1]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[3]/button').click()
 
 def init():     
-    bot(usern, message_)
+    bot(usern)
     input("DONE")
 
 init()
